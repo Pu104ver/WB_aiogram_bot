@@ -5,7 +5,7 @@ from config import bot
 
 
 @app.task
-async def send_notifications():  # FIXME: задачу видит, выполняет, запускается, но почему-то внутри функции ничего не срабатывает
+async def send_notifications():
     print('Сработала задача\n\n\n')
     subscribed_users = await DBRequest.get_subscribed_users()
     for user in subscribed_users:
